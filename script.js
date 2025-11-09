@@ -21,7 +21,34 @@ function autoPlay() {
     isAutoPlaying = false;
   }
 
-}
+};
+document.querySelector('.js-button-scissors')
+  .addEventListener('click', () => {
+    playGame('scissors');
+  });
+
+document.querySelector('.js-button-paper')
+  .addEventListener('click', () => {
+    playGame('paper');
+  });
+
+document.querySelector('.js-button-rock')
+  .addEventListener('click', () => {
+    playGame('rock');
+  });
+
+document.querySelector('.js-button-auto')
+  .addEventListener('click', () => {
+    autoPlay();
+  })
+document.querySelector('.js-button-reset')
+  .addEventListener('click', () => {
+    score.wins = 0;
+    score.loses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+  });
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
