@@ -3,6 +3,10 @@
         background-color: rgb(25, 25, 25);
         color: white;
         font-family: Arial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       .title {
         font-size: 30px;
@@ -42,13 +46,18 @@
       }
       .confirm-message{
         display: flex;
+        background-color: rgb(119, 119, 119);
+        border-radius: 5px;
+        padding-left: 10px;
         align-items: center;
         margin-top: 20px;
       }
       .confirm-button{
         margin-left: 10px;
+        margin-right: 5px;
         background-color: white;
         border: none;
-        padding: 10px 13px;
+        border-radius: 5px;
+        padding: 6px 9px;
         font-size: 16px;
       }
